@@ -1,6 +1,4 @@
-package While;
-
-public class exemplo {
+public class While{
     public static void main(String[] args) {
         
         int i = 1;
