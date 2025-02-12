@@ -1,4 +1,3 @@
-package Aula;
 public class Aula01 {
     public static void main(String[] args) {
         String nome = "Iuri";

@@ -1,4 +1,3 @@
-package Aula;
 import java.util.Locale;
 
 public class Numeros {
