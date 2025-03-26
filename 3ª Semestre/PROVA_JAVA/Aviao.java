@@ -3,10 +3,10 @@ public class Aviao {
     private int capacidadeTotal;
     private int assentosDisponiveis;
     
-    public Aviao(int numero, int capacidadeTotal) {
+    public Aviao(int numero, int capacidadeTotal ,int assentosDisponiveis) {
         this.numero = numero;
         this.capacidadeTotal = capacidadeTotal;
-        this.assentosDisponiveis = capacidadeTotal;
+        this.assentosDisponiveis = assentosDisponiveis;
     }
     
     public int getNumero() {
