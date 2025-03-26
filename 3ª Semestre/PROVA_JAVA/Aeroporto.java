@@ -18,7 +18,7 @@ public class Aeroporto {
                 System.out.println("6 - Sair do Sistema");
                 System.out.print("Escolha a opção desejada: ");
                 opcao = sc.nextInt();
-                sc.nextLine(); // Limpar buffer
+                sc.nextLine(); 
                 
                 switch (opcao) {
                     case 1:
@@ -30,17 +30,26 @@ public class Aeroporto {
                         int numeroAviao = sc.nextInt();
                         System.out.print("Informe a quantidade de assentos: ");
                         int assentos = sc.nextInt();
-                        avioes.add(new Aviao(numeroAviao, assentos));
+                        avioes.add(new Aviao(numeroAviao, numeroAviao, assentos));
                         // Cria um novo objeto a classe aviao, e adiciona a lista avioes
 
                         System.out.println("Avião cadastrado com sucesso!");
                         break;
                     
                     case 2:
-                        System.out.println("\n==== Quantidade De Assentos ====");
-                        for (Aviao aviao : avioes) {
-                            System.out.println("Avião " + aviao.getNumero() + ": " + aviao.getAssentosDisponiveis() + " assentos disponíveis");
+                        // Visualiza a quantidade de aviões e quantos assentos cada um tem
+                        if (avioes.size()<= 0) {
+                            System.out.println("Não Possui nenhum Avião Cadastrado ou Assentos Disponíveis... Tente Novamente Na Opção 1");
+
+                            
+                        }else{
+                            System.out.println("\n==== Quantidade De Assentos ====");
+                            
+                            for (Aviao aviao : avioes) {
+                                System.out.println("Avião " + aviao.getNumero() + ": " + aviao.getAssentosDisponiveis() + " assentos disponíveis");
+                            }
                         }
+
                         break;
                     
                     case 3:
@@ -61,7 +70,7 @@ public class Aeroporto {
                         }
                         
                         if (aviaoSelecionado == null) {
-                            System.out.println("Este avião não existe!");
+                            System.out.println("Este avião não existe! Volte para a Opção 1");
                             break;
                         }
                         
