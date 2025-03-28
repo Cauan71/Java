@@ -30,7 +30,7 @@ public class A3 {
                     String ano = JOptionPane.showInputDialog(null,"Informe o Ano de Fabricação: "
                                                             ,"CADASTRO",JOptionPane.INFORMATION_MESSAGE);
 
-                    int anoFabricado = Integer.parseInt(ano);
+                    
 
                     lista.add(new a31(marca, modelo, 0, 0));
 
@@ -58,24 +58,27 @@ public class A3 {
                     JOptionPane.showMessageDialog(null,"Não Há carros cadastrados");
                     
                 }else{    
-                    for (int i = 1; i < lista.size(); i++) {
-                        a31 atvd = lista.get(i);
-                        
-                        String option = JOptionPane.showInputDialog(null,"\nÍndice: "+i+
-                                                                    "Informe o carro que deseja detalhar: ");
 
-                       if (lista.get(i).equals(option)) {
-                            JOptionPane.showMessageDialog(null,i+"ª Carro: "+lista);
                         
-                       }
-                        
+                        String carroProcurado = JOptionPane.showInputDialog(null,"Informe o carro que deseja detalhar: ");
+
+                        int indice = lista.indexOf(carroProcurado);
+
+                        if (indice != -1) {
+                            JOptionPane.showMessageDialog(null,"O Carro"+carroProcurado+ "está na Posição: "+indice);
+                            
+                        }else{
+                            JOptionPane.showMessageDialog(null,"O Carro "+carroProcurado+ " não foi encontrado");
+                        }
+
                         
                     }
                     
-                }
+                
                     break;
 
                 case "4":
+                    JOptionPane.showMessageDialog(null, "Saindo Do Sistema.....");
 
                     break;
             
