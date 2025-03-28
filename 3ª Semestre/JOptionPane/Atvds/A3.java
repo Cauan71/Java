@@ -30,24 +30,27 @@ public class A3 {
                     String ano = JOptionPane.showInputDialog(null,"Informe o Ano de Fabricação: "
                                                             ,"CADASTRO",JOptionPane.INFORMATION_MESSAGE);
 
-                    
+                    int anoFabricado = Integer.parseInt(ano);
 
-                    lista.add(new a31(marca, modelo, 0, 0));
+                    lista.add(new a31(marca, modelo, anoFabricado));
 
                     JOptionPane.showMessageDialog(null,"Carro Cadastrado com Sucesso!! ");
 
                     break;
 
                 case "2":
-
-                for (a31 car : lista) {
+                for (int i = 0; i < lista.size(); i++) {
                     
-                    JOptionPane.showMessageDialog(null,"===== CARRO CADASTRADO ====="+
-                                                "\nMarca: "+ car.getMarca()+
-                                                "\nModelo: "+car.getModelo() + 
-                                                "\nAno Fabricado: "+car.getAnoFabricado());
-
-                    
+                    for (a31 car : lista) {
+                        
+                        JOptionPane.showMessageDialog(null,"===== CARRO CADASTRADO ====="+
+                        "\nÍndice: "+i+
+                        "\nMarca: "+ car.getMarca()+
+                        "\nModelo: "+car.getModelo() + 
+                        "\nAno Fabricado: "+car.getAnoFabricado());
+                        
+                        
+                    }
                 }
 
                     break;
